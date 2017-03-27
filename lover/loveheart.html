@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>I LOVE U</title>
+  <link rel="shortcut icon" href="/lover/favicon.ico">
+  <link href="./css/default.css?v=201702013" type="text/css" rel="stylesheet">
+  <style type="text/css">
+    @font-face {
+      font-family: digit;
+      src: url('./fonts/digital-7_mono.ttf') format("truetype");
+    }
+  </style>
+  <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="./js/garden.js"></script>
+  <script type="text/javascript" src="./js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+  <div id="content" style="width: 670px; height: 625px; margin-top: 640px; margin-left: 155px;">
+    <div id="loveHeart">
+      <canvas id="garden" width="670" height="625"></canvas>
+      <div id="words" style="position: absolute; top: 673.5px; left: 235px;">
+        <div id="messages" style="display: block;">
+          XX，<br/>
+          所有我们经历的点点滴滴，<br/>
+          都是我们一辈子最美的回忆。<br/>
+          一生守候不是一句简单而苍白的山盟海誓，<br/>
+          而是无数个平淡的日子同舟共济，相濡以沫。<br/><br/>
+          <div id="elapseClock" style="display:none"></div>
+        </div>
+        <div id="loveu" style="display: block;">
+          让我们一起慢慢变老。<br>
+          <div class="signature">- 吴志伟</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  var offsetX = $("#loveHeart").width() / 2;
+  var offsetY = $("#loveHeart").height() / 2 - 55;
+  if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    document.execCommand("stop");
+  } else {
+    setTimeout(function () {
+      adjustWordsPosition();
+      startHeartAnimation();
+    }, 1000);
+
+    var together = new Date("2016-10-16 00:00:00");
+    $("#elapseClock").show();
+    timeElapse(together);
+    setInterval(function () {
+      timeElapse(together);
+    }, 500);
+  }
+</script>
+
+</body>
+</html>

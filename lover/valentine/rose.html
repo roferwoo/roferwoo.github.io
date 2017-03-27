@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
+  <title>Happy Valentine's Day!</title>
+  <link rel="shortcut icon" href="/lover/favicon.ico">
+  <style type="text/css">
+    .rose {
+      width: auto;
+      text-align: center;
+    }
+
+    .words {
+      font-size: 150px;
+      font-family: 'Regular', cursive;
+      width: auto;
+      /*text-align: center;*/
+    }
+
+    .en {
+      margin-top: 48px;
+      font-size: 48px;
+      font-family: "Monda_bo", Georgia, sans-serif;
+      width: auto;
+      text-align: center;
+    }
+
+    .days {
+      font-size: 216px;
+      font-family: 'Rye', cursive;
+      width: auto;
+      text-align: center;
+    }
+
+    .days-label {
+      font-size: 54px;
+    }
+
+    .seconds {
+      margin-top: 32px;
+      font-size: 32px;
+      font-family: "Monda_bo", Georgia, sans-serif;
+      width: auto;
+      text-align: center;
+    }
+
+    .container {
+      position: absolute;
+    }
+
+    .signature {
+      margin-top: 30px;
+      margin-right: 10px;
+      font-size: 32px;
+      font-style: italic;
+      text-align: right;
+    }
+
+    @font-face {
+      font-family: 'Regular';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Rye Regular'), local('Rye-Regular'), url('../fonts/text1.ttf') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Rye';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Rye Regular'), local('Rye-Regular'), url('../fonts/Clockopia.ttf') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Monda_no';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Monda'), local('Monda-Regular'), url('../fonts/Monda-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Monda_bo';
+      font-style: normal;
+      font-weight: bold;
+      src: local('Monda Bold'), local('Monda-Bold'), url('../fonts/Monda-Bold.ttf') format('truetype');
+    }
+  </style>
+  <script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script>
+    window.location = "/index.html";
+    document.ready = function () {
+      $(window).resize();
+      //            updateNumbers();
+    };
+
+    $(window).resize(function () {
+      $('.container').css({
+        position: 'absolute',
+        left: ($(window).width() - $('.container').outerWidth()) / 2,
+        top: ($(window).height() - $('.container').outerHeight()) / 2
+      });
+    });
+
+    function updateNumbers() {
+      //var start_time = 1253980800;
+      var beginTime = "2016-10-16 00:00:00";
+      var start_time = Date.parse(beginTime)
+      // var start_time =  new Date("2014-11-11 10:10:10").Format("yyyy-MM-dd hh:mm:ss");
+      var duration = parseInt(Date.now() - start_time) / 1000;
+
+      var seconds = parseInt(duration % 60);
+      if (seconds < 10)
+        seconds = "0" + seconds;
+      duration = parseInt(duration / 60);
+      var minutes = duration % 60;
+      if (minutes < 10)
+        minutes = "0" + minutes;
+      duration = parseInt(duration / 60);
+      var hours = duration % 24;
+      if (hours < 10)
+        hours = "0" + hours;
+      duration = parseInt(duration / 24);
+      var days = duration;
+      $('.days-number').text("" + days);
+      $('.seconds').text(hours + " hours " + minutes + " minutes " + seconds + " seconds");
+      setTimeout("updateNumbers()", 1000);
+    }
+  </script>
+</head>
+<body>
+<div class="container" style="position: absolute;">
+  <div class="rose">
+    <canvas id="c" width="600" height="600"></canvas>
+  </div>
+  <script>
+    var b = document.body;
+    var c = document.getElementsByTagName('canvas')[0];
+    var a = c.getContext('2d');
+    document.body.clientWidth;
+
+    with (m = Math)C = cos, S = sin, P = pow, R = random;
+    c.width = c.height = f = 600;
+    h = -250;
+    function p(a, b, c) {
+      if (c > 60)return [S(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) - S(b) * 50, b * f + 50, 625 + C(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) + b * 400, a * 1 - b / 2, a];
+      A = a * 2 - 1;
+      B = b * 2 - 1;
+      if (A * A + B * B < 1) {
+        if (c > 37) {
+          n = (j = c & 1) ? 6 : 4;
+          o = .5 / (a + .01) + C(b * 125) * 3 - a * 300;
+          w = b * h;
+          return [o * C(n) + w * S(n) + j * 610 - 390, o * S(n) - w * C(n) + 550 - j * 350, 1180 + C(B + A) * 99 - j * 300, .4 - a * .1 + P(1 - B * B, -h * 6) * .15 - a * b * .4 + C(a + b) / 5 + P(C((o * (a + 1) + (B > 0 ? w : -w)) / 25), 30) * .1 * (1 - B * B), o / 1e3 + .7 - o * w * 3e-6]
+        }
+        if (c > 32) {
+          c = c * 1.16 - .15;
+          o = a * 45 - 20;
+          w = b * b * h;
+          z = o * S(c) + w * C(c) + 620;
+          return [o * C(c) - w * S(c), 28 + C(B * .5) * 99 - b * b * b * 60 - z / 2 - h, z, (b * b * .3 + P((1 - (A * A)), 7) * .15 + .3) * b, b * .7]
+        }
+        o = A * (2 - b) * (80 - c * 2);
+        w = 99 - C(A) * 120 - C(b) * (-h - c * 4.9) + C(P(1 - b, 7)) * 50 + c * 2;
+        z = o * S(c) + w * C(c) + 700;
+        return [o * C(c) - w * S(c), B * 99 - C(P(b, 7)) * 50 - c / 3 - z / 1.35 + 450, z, (1 - b / 1.2) * .9 + a * .1, P((1 - b), 20) / 4 + .05]
+      }
+    }
+    setInterval('for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)}', 0)
+  </script>
+  <div class="words">XX<br/>情人节快乐！</div>
+  <div class="en">Happy Valentine's Day~</div>
+  <!--<div class="days">-->
+  <!--<span class="days-number">36500</span>-->
+  <!--<span class="days-label">days</span>-->
+  <!--</div>-->
+  <!--<div class="seconds">0 hours 0 minutes 0 seconds</div>-->
+  <div class="signature">- 吴志伟</div>
+</div>
+</body>
+</html>

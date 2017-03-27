@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <link rel="apple-touch-icon-precomposed" href="./images/1.png">
+  <link rel="shortcut icon" href="/lover/favicon.ico">
+  <meta name="format-detection" content="telephone=no">
+  <title>ILU</title>
+  <style type="text/css">
+    body {
+      text-align: center;
+      margin: 0px;
+      padding: 0px;
+      font-size: 25px;
+      color: #FFF;
+      font-family: "微软雅黑";
+      background: #f3961c;
+    }
+
+    div {
+      text-align: left;
+    }
+
+    .tittle {
+      width: 100%;
+      background: #f3961c;
+      top: 0px;
+      height: 100%;
+      z-index: 0;
+      position: absolute;
+      position: fixed !important;
+      display: none;
+      cursor: default;
+    }
+
+    .big {
+      font-family: "微软雅黑";
+      color: #FFF;
+      font-size: 35px;
+    }
+
+    .hint {
+      position: absolute;
+      position: fixed !important;
+      z-index: 99;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .hintContent {
+      border: 1px solid #FFF;
+      font-size: 18px;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+  <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+  <script>
+    $(document).ready(function (e) {
+      $(document).scrollTop(300);
+      /*移动滚动条到最下方*/
+      var timer = setInterval("$.change()", 6000);
+      var t = 1;
+
+      $(document).click(
+          function () {
+            /*如果用户点击了，就取消自动播放*/
+            clearInterval(timer);
+            $.change();
+          }
+      );
+
+      /*切换*/
+      $.change = function () {
+        t++;
+        if (t <= $(".tittle").length) {
+          $(".tittle").slideUp(1500).fadeOut();
+          $("#t-" + t).slideDown(1500).fadeIn();
+        } else {
+          /*localStorage["index"] = "1";
+           // window.location = "say.html";
+           var r = confirm("看到这里还不答应我，答应我啦~");
+           if (r == true)
+           {
+           window.location = "loveheart.html";
+           }
+           else
+           {
+           alert("T…T，我会继续努力的~");
+           }*/
+          window.location = "loveheart.html";
+        }
+      }
+
+      /*$('#answer').click(
+       function () {
+       window.location = "redheart.html";
+       }
+       );*/
+    });
+  </script>
+
+</head>
+
+<body>
+<center>
+  <div class="tittle" id="t-1" style="display: block;">
+    <table width="100%" border="0" height="100%">
+      <tbody>
+      <tr>
+        <td align="center"><span class="big">正在初始化</span>...</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tittle" id="t-2" style="">
+    <table width="100%" border="0" height="100%">
+      <tbody>
+      <tr>
+        <td align="center"><span class="big">在这个特殊的</span>地方</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tittle" id="t-3" style="">
+    <table width="100%" border="0" height="100%">
+      <tbody>
+      <tr>
+        <td align="center">我想对<span class="big">某人说</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</center>
+
+<div class="tittle" id="t-4" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        我的<span class="big">爱人</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tittle" id="t-5" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        我会牵着你的手，<br><span class="big">走到满头白发的那一天</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tittle" id="t-6" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        我会<span class="big">守护你</span>生命里的精彩，<br>并<span class="big">陪伴你</span>一路精彩下去
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tittle" id="t-7" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        我会<span class="big">带你去</span>所有你想去的地方，<br>陪你闹看你笑^v^
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tittle" id="t-8" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        我会为<span class="big">我们的未来</span>撑起一片天空
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tittle" id="t-9" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        我愿意<span class="big">爱你直到老去</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tittle" id="t-10" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        我愿意<span class="big">为你去做每一件</span>能让你开心快乐的事
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tittle" id="t-11" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        <span class="big">理解</span>你，<span class="big">支持</span>你
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tittle" id="t-12" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        你的<span class="big">幸福快乐，</span><br>是我<span class="big">一生的追求</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tittle" id="t-13" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        我期待这<span class="big">一生与你</span>一起走过
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tittle" id="t-14" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        <span class="big">与你慢慢变老</span>
+        <br><span class="big">.</span>
+        <br><span class="big">.</span>
+        <br><span class="big">.</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="tittle" id="t-15" style="">
+  <table width="100%" border="0" height="100%">
+    <tbody>
+    <tr>
+      <td align="center">
+        <span class="big">Love u forever and ever</span><br>
+        <span class="hintContent" id="answer">点我点我>></span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div align="center" class="hint">
+  <span class="hintContent">轻触屏幕继续</span>
+</div>
+</body>
+</html>
