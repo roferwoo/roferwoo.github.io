@@ -59,7 +59,7 @@ function CountAge(secs) {
     var age = '已活：' + (c.getFullYear() - 1970) + '年'
         + (c.getMonth()) + '个月'
         + (c.getDate() - 1) + '天'
-        + (c.getHours() - 8) + '小时'
+        + c.getHours() + '小时'
         + c.getMinutes() + '分'
         + c.getSeconds() + '秒';
     return age;
