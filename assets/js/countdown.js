@@ -61,7 +61,8 @@ function CountAge(secs) {
         + (c.getDate() - 1) + '天'
         + c.getHours() + '小时'
         + c.getMinutes() + '分'
-        + c.getSeconds() + '秒';
+        + c.getSeconds() + '秒（'
+        + ((Math.floor(secs / 86400)) % 100000).toString() + '天）';
     return age;
 }
 
