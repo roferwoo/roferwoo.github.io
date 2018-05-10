@@ -87,10 +87,10 @@
   </style>
   <script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
   <script>
-    window.location = "/index.html";
+//    window.location = "/index.html";
     document.ready = function () {
       $(window).resize();
-      //            updateNumbers();
+      updateNumbers();
     };
 
     $(window).resize(function () {
@@ -103,7 +103,7 @@
 
     function updateNumbers() {
       //var start_time = 1253980800;
-      var beginTime = "2016-10-16 00:00:00";
+      var beginTime = "2018-02-17 00:00:00";
       var start_time = Date.parse(beginTime)
       // var start_time =  new Date("2014-11-11 10:10:10").Format("yyyy-MM-dd hh:mm:ss");
       var duration = parseInt(Date.now() - start_time) / 1000;
@@ -167,7 +167,7 @@
     }
     setInterval('for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)}', 0)
   </script>
-  <div class="words">XX<br/>情人节快乐！</div>
+  <div class="words">琳<br/>情人节快乐！</div>
   <div class="en">Happy Valentine's Day~</div>
   <!--<div class="days">-->
   <!--<span class="days-number">36500</span>-->
