@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>世界上最美的女人</title>
+  <title>世界上最美的人！</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="keywords" content="生日礼物，惊喜，有趣，最美"/>
   <meta name="description" content="世界上最美的女人，节日快乐"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="css/ohmygod.css?201703071150" rel="stylesheet" type="text/css"/>
+  <script>
+    window.onload = function () {
+      var img = document.getElementById('pic'),
+          img_name = Math.ceil(Math.random() * 2);
+      if (img_name == 2) {
+        document.title = "世界上最帅的人！";
+        setInterval(function () {
+          img.src = 'pic/' + img_name + '.jpeg';
+        }, 1000 );
+//        document.getElementById('pic').src = 'pic/' + img_name + '.jpeg';
+//        document.getElementById('pic').setAttribute('src', 'pic/' + img_name + '.jpeg');
+      }
 
+    };
+  </script>
 </head>
 <body>
 <div class="container container-center-vertical">
@@ -37,7 +51,7 @@
     </div>
     <div class="col-xs-4 col-md-4">
       <a href="#" class="thumbnail">
-        <img src="pic/l1.jpeg" alt="..." id="person">
+        <img src="pic/1.jpeg" alt="..." id="pic">
       </a>
     </div>
     <div class="col-xs-4 col-md-4">
