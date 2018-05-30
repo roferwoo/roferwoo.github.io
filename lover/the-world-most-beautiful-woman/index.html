@@ -9,7 +9,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
   <link href="css/ohmygod.css?201703071150" rel="stylesheet" type="text/css"/>
   <script>
-//    window.onload = function () {
+    window.onload = function () {
 //      var img = document.getElementById('pic'),
 //          img_name = Math.ceil(Math.random() * 2);
 //      if (img_name == 2) {
@@ -20,7 +20,8 @@
 //        document.getElementById('pic').src = 'pic/' + img_name + '.jpeg';
 //        document.getElementById('pic').setAttribute('src', 'pic/' + img_name + '.jpeg');
 //      }
-//    };
+      document.getElementById('copyright_year').innerHTML = (new Date()).getFullYear();
+    };
   </script>
 </head>
 <body>
@@ -79,7 +80,7 @@
 </div>
 <footer class="footer navbar-fixed-bottom">
   <div class="container">
-    <p class="text-muted pull-right">You are my Goddess | 2017 © wuzhiwei.cn</a></p>
+    <p class="text-muted pull-right">You are my Goddess | <span id="copyright_year">2017</span> © wuzhiwei.cn</a></p>
   </div>
 </footer>
 </body>
